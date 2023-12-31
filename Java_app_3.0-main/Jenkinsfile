@@ -18,9 +18,8 @@ pipeline{
         stage('Git Checkout'){
                     when { expression {  params.action == 'create' } }
             steps{
-            gitCheckout(
-                branch: "main",
-                url: "https://github.com/srinivasreddyjangam/JENKINS-PROJECTS.git"
+           gitCheckout(branch: "main", url: "https://github.com/srinivasreddyjangam/JENKINS-PROJECTS.git")
+
             )
             }
         }
